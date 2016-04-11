@@ -195,6 +195,10 @@ public class NoviZadaci extends javax.swing.JPanel {
         // TODO add your handling code here:
         try {
             String sifra = jtxtSifra1.getText();
+             if(!sifra.matches("SIF-[0-9]+")){
+                JOptionPane.showMessageDialog(jcbZaposleni, "Sifra mora da bude 'SIF-X' formata");
+            }
+
             String naziv = jtxtNaziv.getText();
             String opis = jtxtOpis.getText();
 
