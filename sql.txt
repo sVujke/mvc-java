@@ -1,0 +1,37 @@
+Common query examples: 
+
+SELECT
+
+"select * from tpredmet"
+
+"select * from tpolozio join "
+                    + "tstudent on tpolozio.GodinaUpisa = tstudent.GodinaUpisa"
+                    + " and tpolozio.BrojIndexa = tstudent.BrojIndexa"
+                    + " where SifraPredmeta="
+
+"select tprijava.*,tpredmet.*,tstudent.*"
+                        + " from tprijava "
+                        + "join tpredmet on tprijava.SifraPredmeta = tpredmet.SifraPredmeta "
+   
+                        + "join tstudent on tprijava.BrIndexa = tstudent.BrIndeksa"
+
+"select tprijava.*,tpredmet.*,tstudent.*"
+                        + " from tprijava "
+                        + "join tpredmet on tprijava.SifraPredmeta = tpredmet.SifraPredmeta "
+                        
+                        + "join tstudent  on tprijava.BrIndexa = tstudent.BrIndeksa"
+                        + " "
+                        + "where tpredmet.SifraPredmeta="   
+                        
+"select * from tzadatak join tzaposleni on tzadatak.zaposleni = tzaposleni.SifraZaposlenog"                     
+
+INSERT
+
+"insert into tasistent (Sifra,Ime,Prezime,Titula,PredmetID) values (?,?,?,?,?)"
+
+
+DELETE
+
+"delete from tpolozio where BrojPrijave="
+
+"delete from tzadatak"
